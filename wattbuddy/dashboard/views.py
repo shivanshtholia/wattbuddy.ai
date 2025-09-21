@@ -95,14 +95,4 @@ def bill_estimator(request):
 def profile_view(request):
     return render(request, 'dashboard/profile.html', {"user": request.user})
 def charts(request):
-  
-    daily_data = [5, 6, 4, 7, 8, 6, 5]  # Mon-Sun
-    weekly_data = [40, 35, 50, 45]       # 4 weeks
-    monthly_data = [120, 140, 110, 160, 130, 150]  # Jan-Jun
-
-    context = {
-        "daily_data": daily_data,
-        "weekly_data": weekly_data,
-        "monthly_data": monthly_data,
-    }
-    return render(request, "dashboard/charts.html", context)
+    return render(request, "dashboard/charts.html")
