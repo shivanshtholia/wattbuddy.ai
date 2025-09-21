@@ -1,5 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %} dashboard | WattBuddy{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
 {% block content %}
     <section class="hero">
         <h1>Welcome to WattBuddy ⚡</h1>

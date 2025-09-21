@@ -41,7 +41,7 @@ def login_view(request):
 # Logout view
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('/')
 
 def dashboard(request):
     labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
