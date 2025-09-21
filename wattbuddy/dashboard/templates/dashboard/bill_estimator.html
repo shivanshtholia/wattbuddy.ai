@@ -1,5 +1,16 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'dashboard.css' %}">
+{% extends "base.html" %}
+{% block title %}Bill Estimator | WattBuddy{% endblock %}
+
+
+
+{% block content %}
+<div class="sidebar">
+  <ul>
+    <li><a href="{% url 'recommendations' %}">✅ Recommendations</a></li>
+    <li><a href="{% url 'bill_estimator' %}">💡 Bill Estimator</a></li>
+    <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
+  </ul>
+</div>
 <h2>Appliance Bill Estimator</h2>
 
 <form method="POST">
@@ -9,9 +20,9 @@
   <select name="appliance" required>
     <option value="">-- Select Appliance --</option>
     {% for name, watt in appliances.items %}
-      <option value="{{ name }}" {% if selected_appliance == name %}selected{% endif %}>
-        {{ name }} ({{ watt }}W)
-      </option>
+    <option value="{{ name }}" {% if selected_appliance == name %}selected{% endif %}>
+      {{ name }} ({{ watt }}W)
+    </option>
     {% endfor %}
   </select><br><br>
 
@@ -28,5 +39,6 @@
 </form>
 
 {% if bill %}
-  <h3>Estimated Bill for {{ selected_appliance }} = ₹{{ bill|floatformat:2 }}</h3>
+<h3>Estimated Bill for {{ selected_appliance }} = ₹{{ bill|floatformat:2 }}</h3>
 {% endif %}
+{% endblock %}

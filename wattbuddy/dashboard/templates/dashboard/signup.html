@@ -1,20 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/auth.css' %}">
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-<nav>
-    <div class="logo">⚡ WattBuddy</div>
-    <div class="links">
-        <a href="/">Home</a>
-        {% if user.is_authenticated %}
-        <a href="/dashboard/">Dashboard</a>
-        <a href="/profile/">Profile</a>
-        <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'signup' %}">Signup</a>
-        {% endif %}
-    </div>
-</nav>
+{% block title %} Login | WattBuddy{% endblock %}
+{% block content %}
 <h2>Signup</h2>
 <form method="POST",action="{% url 'signup' %}">
     {% csrf_token %}
@@ -24,6 +11,4 @@
     <button type="submit">Signup</button>
 </form>
 <a href="{% url 'login' %}">Already have an account? Login</a>
- <footer>
-        &copy; 2025 WattBuddy. All rights reserved.
-    </footer>
+{% endblock %}

@@ -1,7 +1,14 @@
-{% extends "dashboard/dashboard.html" %}
+{% extends "base.html" %}
 
 
 {% block content %}
+<div class="sidebar">
+  <ul>
+    <li><a href="{% url 'recommendations' %}">✅ Recommendations</a></li>
+    <li><a href="{% url 'bill_estimator' %}">💡 Bill Estimator</a></li>
+    <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
+  </ul>
+</div>
   <h2>✅ Energy Saving Recommendations</h2>
   <p>Here are some personalized tips to reduce your electricity bill:</p>
 
