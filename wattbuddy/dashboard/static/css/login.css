@@ -1,41 +1,36 @@
-/* login.css - login form with animation */
-
-/* Keyframes for fade-in and slide-up */
 @keyframes fadeSlideUp {
     0% {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Center the form vertically and horizontally with animation */
 form {
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent to match gradient */
+    background: rgba(255, 255, 255, 0.1);
     padding: 40px 30px;
     border-radius: 12px;
     backdrop-filter: blur(8px);
     width: 100%;
     max-width: 400px;
-    margin: 80px auto; /* spacing from top */
+    margin: 80px auto;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeSlideUp 0.8s ease forwards; /* animation */
+    animation: fadeSlideUp 0.8s ease forwards;
 }
 
-/* Heading */
 h2 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 28px;
     font-weight: bold;
     color: #ffd369;
-    animation: fadeSlideUp 1s ease forwards; /* optional delayed effect */
+    animation: fadeSlideUp 1s ease forwards;
 }
 
-/* Input fields */
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -62,7 +57,6 @@ input[type="password"]:focus {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Submit button */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -78,29 +72,13 @@ button[type="submit"] {
     animation: fadeSlideUp 1.2s ease forwards;
 }
 
+
 button[type="submit"]:hover {
     background-color: #ffbe0b;
 }
-/* body {
-   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-   background: linear-gradient(135deg, #1e3c72, #2a5298);
-   color: #fff;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
- } */
- body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
-footer {
-    margin-top: auto; /* pushes footer to bottom */
-}
 
-/* Signup link */
-a {
+.signup_link {
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -111,7 +89,7 @@ a {
     animation: fadeSlideUp 1.4s ease forwards;
 }
 
-a:hover {
+.signup_link:hover {
     color: #ffbe0b;
     text-decoration: underline;
 }

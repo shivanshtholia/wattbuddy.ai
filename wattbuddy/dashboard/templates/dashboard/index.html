@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} dashboard | WattBuddy{% endblock %}
+
+{% block title %} dashboard | WattBuddy {% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
+
 {% block content %}
-    <section class="hero">
-        <h1>Welcome to WattBuddy ⚡</h1>
-        {% if user.is_authenticated %}
-        <p>Hello, <b>{{ user.username }}</b>! Track your energy usage and manage your dashboard efficiently.</p>
-        <a href="/dashboard/" class="btn">Go to Dashboard</a>
-        {% else %}
-        <p>WattBuddy helps you monitor and optimize energy consumption. Join us to build a greener future 🌱</p>
-        <a href="{% url 'signup' %}" class="btn">Get Started</a>
-        {% endif %}
-    </section>
+<section class="hero">
+    <h1>Welcome to WattBuddy ⚡</h1>
+    {% if user.is_authenticated %}
+    <p>Hello, <b>{{ user.username }}</b>! Track your energy usage and manage your dashboard efficiently.</p>
+    <a href="/dashboard/" class="btn">Go to Dashboard</a>
+    {% else %}
+    <p>WattBuddy helps you monitor and optimize energy consumption. Join us to build a greener future 🌱</p>
+    <a href="{% url 'signup' %}" class="btn">Get Started</a>
+    {% endif %}
+</section>
 {% endblock %}
