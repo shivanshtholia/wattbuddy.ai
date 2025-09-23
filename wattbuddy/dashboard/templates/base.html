@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}WattBuddy{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
   {% block extra_css %}
   {% endblock %}
@@ -16,7 +15,9 @@
 <body>
 
   <nav>
-    <div class="logo">⚡ WattBuddy</div>
+    <div class="logo">
+      <a href="/" style="text-decoration: none; color: inherit;">⚡ WattBuddy</a>
+    </div>
     <div class="links">
       <a href="/">Home</a>
       {% if user.is_authenticated %}
