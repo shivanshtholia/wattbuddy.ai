@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-
+{%load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="sidebar">
@@ -9,8 +12,8 @@
     <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
   </ul>
 </div>
-  <h2>✅ Energy Saving Recommendations</h2>
-  <p>Here are some personalized tips to reduce your electricity bill:</p>
+  <center><h2> Energy Saving Recommendations</h2>
+  <p>Here are some personalized tips to reduce your electricity bill:</p></center>
 
   <div class="recommendations">
     <div class="card">

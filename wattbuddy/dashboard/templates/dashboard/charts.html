@@ -5,6 +5,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/charts.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,8 +16,9 @@
     <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
   </ul>
 </div>
-<div class="charts-container">
+<center>
   <h2>Usage Charts</h2>
+<div class="charts-container">
 
   <!-- Dropdown for chart type -->
   <label for="chartType">Select Chart:</label>
@@ -28,7 +30,7 @@
 
   <!-- Chart Canvas -->
   <canvas id="usageChart"></canvas>
-</div>
+</div></center>
 
 <!-- Chart.js Library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
