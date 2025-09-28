@@ -7,14 +7,14 @@
  body {
    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
    background: linear-gradient(135deg, #1e3c72, #2a5298);
-   color: #fff;
+   color: #f8f8f5;
    min-height: 100vh;
    display: flex;
    flex-direction: column;
  }
 
  nav {
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(82, 236, 167, 0.748);
    padding: 15px 50px;
    display: flex;
    justify-content: space-between;
@@ -43,7 +43,7 @@
  .main-content {
    padding: 30px;
    min-height: 100vh;
-   background: #3450c2;
+   background: #00030ffd;
  }
 
  .main-content h2 {
@@ -51,7 +51,7 @@
  }
 
  footer {
-   background: rgba(0, 0, 0, 0.5);
+   background: rgba(208, 234, 7, 0.533);
    text-align: center;
    padding: 15px;
    font-size: 14px;
