@@ -1,5 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Dashboard | WattBuddy{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
 {% block content %}
 <div class="sidebar">
     <ul>
@@ -9,7 +13,8 @@
     </ul>
   </div>
  <div class="main-content">
-    <h2>Welcome to your Dashboard ⚡</h2>
-    <p>Select a feature from the sidebar to explore your energy usage.</p>
+   <center>
+   <h2>Welcome to your Dashboard ⚡</h2>
+    <p>Select a feature from the sidebar to explore your energy usage.</p></center>
   </div>
 {% endblock %}

@@ -1,0 +1,103 @@
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  min-height:auto; /* nav height adjust */
+  background: #0d1b2a;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1b263b;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 60px; /* nav ke niche chipak jaaye */
+  height:auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 5px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #f1f3ed;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: #415a77;
+  color: #fff;
+  border-left: 4px solid #52eca7; /* nav ke green ke saath match */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #00030f;
+  color: #f8f8f5;
+}
+
+.main-content h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  color: brown;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    top:auto;
+    position: relative;
+    justify-content: space-around;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+  }
+
+  .sidebar ul li a {
+    padding: 15px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .sidebar ul li a:hover {
+    border-bottom: 3px solid #52eca7;
+  }
+}
