@@ -28,5 +28,7 @@ urlpatterns = [
     path("profile/", views.profile_view, name="profile"),
     path("charts/", views.charts, name="charts"),
     path('recommendations/', views.recommendations, name='recommendations'),
-    path('bill-estimator/', views.bill_estimator, name='bill_estimator')
+    path('bill-estimator/', views.bill_estimator, name='bill_estimator'),
+    path('ai-insights/', views.ai_insights, name='ai_insights'),
+
 ]

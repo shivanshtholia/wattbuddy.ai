@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import random
 
 # Create your views here.
 def index(request):
@@ -97,3 +98,31 @@ def profile_view(request):
     return render(request, 'dashboard/profile.html', {"user": request.user})
 def charts(request):
     return render(request, "dashboard/charts.html")
+
+
+
+@login_required
+def ai_insights(request):
+    # Dummy usage data (baad me DB se connect kar sakta hai)
+    weekly_usage = random.randint(200, 600)
+    avg_usage = 350
+
+    insights = []
+
+    if weekly_usage > avg_usage:
+        insights.append("⚡ Your energy usage is above average this week.")
+    else:
+        insights.append("✅ Your energy usage is within the efficient range.")
+
+    if weekly_usage > 500:
+        insights.append("❄ High consumption detected. AC or heater overuse suspected.")
+
+    if weekly_usage < 250:
+        insights.append("🌱 Great job! You are conserving electricity effectively.")
+
+    insights.append("💡 Tip: Switching to LED bulbs can reduce lighting cost by 70%.")
+
+    return render(request, "ai_insights.html", {
+        "usage": weekly_usage,
+        "insights": insights
+    })
