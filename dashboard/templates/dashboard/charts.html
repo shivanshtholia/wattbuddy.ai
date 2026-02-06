@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Charts | WattBuddy{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/charts.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="sidebar">
+  <ul>
+    <li><a href="{% url 'recommendations' %}">✅ Recommendations</a></li>
+    <li><a href="{% url 'bill_estimator' %}">💡 Bill Estimator</a></li>
+    <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
+    <li><a href="{% url 'ai_insights' %}">🤖 AI Insights</a></li>
+
+  </ul>
+</div>
+<center>
+  <h2>Usage Charts</h2>
+<div class="charts-container">
+
+  <!-- Dropdown for chart type -->
+  <label for="chartType">Select Chart:</label>
+  <select id="chartType">
+    <option value="day">Daywise (Bar Chart)</option>
+    <option value="week">Weekwise (Line Chart)</option>
+    <option value="month">Monthly (Pie Chart)</option>
+  </select>
+
+  <!-- Chart Canvas -->
+  <canvas id="usageChart"></canvas>
+</div></center>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/charts.js' %}"></script>
+{% endblock %}

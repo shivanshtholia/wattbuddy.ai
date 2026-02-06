@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Login | WattBuddy{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+{% block content %}
+<div class="profile-container">
+    <h2>👤 My Profile</h2>
+    <div class="profile-card">
+        {% if user.profile.profile_pic %}
+        <img src="{{ user.profile.profile_pic.url }}" alt="Profile Picture">
+        {% else %}
+        <img src="{% static 'images/profile.png' %}" alt="Default Pic">
+        {% endif %}
+
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.profile.phone }}</p>
+        <p><strong>Address:</strong> {{ user.profile.address }}</p>
+    </div>
+</div>
+
+{% endblock %}

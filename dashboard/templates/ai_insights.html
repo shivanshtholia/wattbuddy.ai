@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="sidebar">
+  <ul>
+    <li><a href="{% url 'recommendations' %}">✅ Recommendations</a></li>
+    <li><a href="{% url 'bill_estimator' %}">💡 Bill Estimator</a></li>
+    <li><a href="{% url 'charts' %}">📊 Usage Charts</a></li>
+    <li><a href="{% url 'ai_insights' %}">🤖 AI Insights</a></li>
+  </ul>
+</div>
+
+<center>
+<h2>🤖 AI Smart Energy Insights</h2>
+<p>This module analyzes your energy usage patterns and provides intelligent suggestions.</p>
+
+<h3>Weekly Usage: {{ usage }} kWh</h3>
+
+<ul>
+{% for tip in insights %}
+<li>{{ tip }}</li>
+{% endfor %}
+</ul>
+</center>
+{% endblock %}
