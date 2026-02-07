@@ -1,0 +1,95 @@
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd369;
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ffd369;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #ffd369;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: fadeSlideUp 1.2s ease forwards;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #ffbe0b;
+}
+
+
+.signup_link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffd369;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    animation: fadeSlideUp 1.4s ease forwards;
+}
+
+.signup_link:hover {
+    color: #ffbe0b;
+    text-decoration: underline;
+}
